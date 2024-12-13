@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Data Diri">
+    <title>Data diri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ff8ff0;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #000000;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .photo {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .share-buttons {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .share-buttons button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+        }
+
+        .share-buttons button:hover {
+            background-color: #2c2cb0;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Data Diri</h1>
+</header>
+
+<main>
+    <div class="container">
+        <h1> website html </h1>
+
+        <h2>Lokasi</h2>
+        <p>Untuk menemukan lokasi, klik link di bawah ini:</p>
+        <p><a href="https://maps.app.goo.gl/PhagB8QcfuDa1rkx6" target="_blank">Klik di sini untuk melihat lokasi di Google Maps</a></p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.6710197577545!2d112.63321307499457!3d-7.929386992094417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd629f1b8a28299%3A0xa995c6171f4fe894!2sSMK%20Negeri%205%20Kota%20Malang!5e0!3m2!1sfr!2sid!4v1734094486581!5m2!1sfr!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <h2>Instagram</h2>
+        <p>URl Instagram:</p>
+        <p><a href="https://www.instagram.com/zalfavivian123/profilecard/?igsh=MXZzNmMwY2h2Y2MyZA==" target="_blank">https://www.instagram.com/zalfavivian123/profilecard/?    igsh=MXZzNmMwY2h2Y2MyZA==</a></p>
+
+        <h2>Foto</h2>
+        <img src="Foto Pribadi.png" alt="Foto Diri" class="photo">
+
+        <div class="share-buttons">
+            <button onclick="shareLink()">Bagikan Halaman Ini</button>
+        </div>
+    </div>
+</main>
+
+<script>
+    function shareLink() {
+        const shareUrl = window.location.href;
+        if (navigator.share) {
+            navigator.share({
+                title: 'DATA DIRI',
+                url: shareUrl
+            }).catch(console.error);
+        } else {
+            alert('Fitur berbagi tidak tersedia di browser ini.');
+        }
+    }
+</script>
+
+</body>
+</html>
